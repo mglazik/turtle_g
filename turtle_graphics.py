@@ -3,9 +3,11 @@
 
 import sys
 
+
 try:
         l = float(input("Podaj kąt: "))
-        s = float(input ('Podaj skok: '))
+        s = float(input('Podaj skok: '))
+        m = float(input('Podaj mnożnik: '))
 
 except ValueError:
         print('Ej, no weź się nie wygłupiaj i podaj liczbę')
@@ -18,15 +20,15 @@ screen = turtle.Screen()
 screen.setup(1800, 900)
 
 
-colors = ['red', 'purple', 'green', 'orange', "blue", 'yellow', ]
+colors = ["brown", "brown1", "brown2", "brown3", "brown4", "indianred4",]
 t = turtle.Pen()
 
 turtle.bgcolor("black")
 
 for x in range(1360):
         t.pencolor(colors[x%6])
-        t.width(x/100 + 0.5)
-        t.forward(x*2+s)
+        t.width(x/1000 + 0.5)
+        t.forward(x*m+s)
         t.left(l)
         t.speed("fastest")
 
